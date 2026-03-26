@@ -258,5 +258,75 @@ namespace SimpleCalculator
         {
 
         }
+
+        private void buttonDiv_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void buttonMul_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void buttonSub_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void buttonAdd_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void buttonEqual_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button1_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button2_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button3_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button4_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button5_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button6_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button7_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button8_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void button9_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
     }
 }
