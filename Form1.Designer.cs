@@ -57,10 +57,10 @@
             // 
             // buttonCE
             // 
-            buttonCE.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
-            buttonCE.Location = new Point(137, 3);
+            buttonCE.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
+            buttonCE.Location = new Point(135, 3);
             buttonCE.Name = "buttonCE";
-            buttonCE.Size = new Size(124, 45);
+            buttonCE.Size = new Size(124, 70);
             buttonCE.TabIndex = 1;
             buttonCE.Text = "CE";
             buttonCE.UseVisualStyleBackColor = true;
@@ -68,10 +68,10 @@
             // 
             // buttonDel
             // 
-            buttonDel.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
-            buttonDel.Location = new Point(271, 3);
+            buttonDel.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
+            buttonDel.Location = new Point(267, 3);
             buttonDel.Name = "buttonDel";
-            buttonDel.Size = new Size(124, 45);
+            buttonDel.Size = new Size(124, 70);
             buttonDel.TabIndex = 2;
             buttonDel.Text = "Del";
             buttonDel.UseVisualStyleBackColor = true;
@@ -80,11 +80,11 @@
             // buttonDiv
             // 
             buttonDiv.BackColor = Color.FromArgb(255, 128, 0);
-            buttonDiv.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            buttonDiv.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 129);
             buttonDiv.ForeColor = Color.White;
-            buttonDiv.Location = new Point(405, 3);
+            buttonDiv.Location = new Point(399, 3);
             buttonDiv.Name = "buttonDiv";
-            buttonDiv.Size = new Size(124, 45);
+            buttonDiv.Size = new Size(124, 70);
             buttonDiv.TabIndex = 3;
             buttonDiv.Text = "÷";
             buttonDiv.UseVisualStyleBackColor = false;
@@ -94,11 +94,11 @@
             // button7
             // 
             button7.BackColor = SystemColors.ActiveCaption;
-            button7.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button7.ForeColor = Color.Teal;
-            button7.Location = new Point(3, 63);
+            button7.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button7.ForeColor = Color.Cyan;
+            button7.Location = new Point(3, 91);
             button7.Name = "button7";
-            button7.Size = new Size(124, 45);
+            button7.Size = new Size(124, 70);
             button7.TabIndex = 4;
             button7.Text = "7";
             button7.UseVisualStyleBackColor = false;
@@ -108,11 +108,11 @@
             // button8
             // 
             button8.BackColor = SystemColors.ActiveCaption;
-            button8.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button8.ForeColor = Color.Teal;
-            button8.Location = new Point(137, 63);
+            button8.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button8.ForeColor = Color.Cyan;
+            button8.Location = new Point(135, 91);
             button8.Name = "button8";
-            button8.Size = new Size(124, 45);
+            button8.Size = new Size(124, 70);
             button8.TabIndex = 5;
             button8.Text = "8";
             button8.UseVisualStyleBackColor = false;
@@ -122,11 +122,11 @@
             // button9
             // 
             button9.BackColor = SystemColors.ActiveCaption;
-            button9.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button9.ForeColor = Color.Teal;
-            button9.Location = new Point(271, 63);
+            button9.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button9.ForeColor = Color.Cyan;
+            button9.Location = new Point(267, 91);
             button9.Name = "button9";
-            button9.Size = new Size(124, 45);
+            button9.Size = new Size(124, 70);
             button9.TabIndex = 6;
             button9.Text = "9";
             button9.UseVisualStyleBackColor = false;
@@ -136,11 +136,11 @@
             // buttonMul
             // 
             buttonMul.BackColor = Color.FromArgb(255, 128, 0);
-            buttonMul.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            buttonMul.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
             buttonMul.ForeColor = Color.White;
-            buttonMul.Location = new Point(405, 63);
+            buttonMul.Location = new Point(399, 91);
             buttonMul.Name = "buttonMul";
-            buttonMul.Size = new Size(124, 45);
+            buttonMul.Size = new Size(124, 70);
             buttonMul.TabIndex = 7;
             buttonMul.Text = "*";
             buttonMul.UseVisualStyleBackColor = false;
@@ -150,11 +150,11 @@
             // button4
             // 
             button4.BackColor = SystemColors.ActiveCaption;
-            button4.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button4.ForeColor = Color.Teal;
-            button4.Location = new Point(3, 123);
+            button4.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button4.ForeColor = Color.Cyan;
+            button4.Location = new Point(3, 179);
             button4.Name = "button4";
-            button4.Size = new Size(124, 45);
+            button4.Size = new Size(124, 70);
             button4.TabIndex = 8;
             button4.Text = "4";
             button4.UseVisualStyleBackColor = false;
@@ -164,11 +164,11 @@
             // button5
             // 
             button5.BackColor = SystemColors.ActiveCaption;
-            button5.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button5.ForeColor = Color.Teal;
-            button5.Location = new Point(137, 123);
+            button5.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button5.ForeColor = Color.Cyan;
+            button5.Location = new Point(135, 179);
             button5.Name = "button5";
-            button5.Size = new Size(124, 45);
+            button5.Size = new Size(124, 70);
             button5.TabIndex = 9;
             button5.Text = "5";
             button5.UseVisualStyleBackColor = false;
@@ -178,11 +178,11 @@
             // button6
             // 
             button6.BackColor = SystemColors.ActiveCaption;
-            button6.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button6.ForeColor = Color.Teal;
-            button6.Location = new Point(271, 123);
+            button6.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button6.ForeColor = Color.Cyan;
+            button6.Location = new Point(267, 179);
             button6.Name = "button6";
-            button6.Size = new Size(124, 45);
+            button6.Size = new Size(124, 70);
             button6.TabIndex = 10;
             button6.Text = "6";
             button6.UseVisualStyleBackColor = false;
@@ -192,11 +192,11 @@
             // buttonSub
             // 
             buttonSub.BackColor = Color.FromArgb(255, 128, 0);
-            buttonSub.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
+            buttonSub.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
             buttonSub.ForeColor = Color.White;
-            buttonSub.Location = new Point(405, 123);
+            buttonSub.Location = new Point(399, 179);
             buttonSub.Name = "buttonSub";
-            buttonSub.Size = new Size(124, 45);
+            buttonSub.Size = new Size(124, 70);
             buttonSub.TabIndex = 11;
             buttonSub.Text = "-";
             buttonSub.UseVisualStyleBackColor = false;
@@ -206,11 +206,11 @@
             // button1
             // 
             button1.BackColor = SystemColors.ActiveCaption;
-            button1.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button1.ForeColor = Color.Teal;
-            button1.Location = new Point(3, 183);
+            button1.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button1.ForeColor = Color.Cyan;
+            button1.Location = new Point(3, 267);
             button1.Name = "button1";
-            button1.Size = new Size(124, 45);
+            button1.Size = new Size(124, 70);
             button1.TabIndex = 12;
             button1.Text = "1";
             button1.UseVisualStyleBackColor = false;
@@ -220,11 +220,11 @@
             // button2
             // 
             button2.BackColor = SystemColors.ActiveCaption;
-            button2.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button2.ForeColor = Color.Teal;
-            button2.Location = new Point(137, 183);
+            button2.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button2.ForeColor = Color.Cyan;
+            button2.Location = new Point(135, 267);
             button2.Name = "button2";
-            button2.Size = new Size(124, 45);
+            button2.Size = new Size(124, 70);
             button2.TabIndex = 13;
             button2.Text = "2";
             button2.UseVisualStyleBackColor = false;
@@ -234,11 +234,11 @@
             // button3
             // 
             button3.BackColor = SystemColors.ActiveCaption;
-            button3.Font = new Font("휴먼둥근헤드라인", 10.8F);
-            button3.ForeColor = Color.Teal;
-            button3.Location = new Point(271, 183);
+            button3.Font = new Font("휴먼둥근헤드라인", 22.2F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            button3.ForeColor = Color.Cyan;
+            button3.Location = new Point(267, 267);
             button3.Name = "button3";
-            button3.Size = new Size(124, 45);
+            button3.Size = new Size(124, 70);
             button3.TabIndex = 14;
             button3.Text = "3";
             button3.UseVisualStyleBackColor = false;
@@ -248,11 +248,11 @@
             // buttonAdd
             // 
             buttonAdd.BackColor = Color.FromArgb(255, 128, 0);
-            buttonAdd.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
+            buttonAdd.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
             buttonAdd.ForeColor = Color.White;
-            buttonAdd.Location = new Point(405, 183);
+            buttonAdd.Location = new Point(399, 267);
             buttonAdd.Name = "buttonAdd";
-            buttonAdd.Size = new Size(124, 45);
+            buttonAdd.Size = new Size(124, 70);
             buttonAdd.TabIndex = 15;
             buttonAdd.Text = "+";
             buttonAdd.UseVisualStyleBackColor = false;
@@ -261,10 +261,10 @@
             // 
             // buttonSign
             // 
-            buttonSign.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
-            buttonSign.Location = new Point(3, 243);
+            buttonSign.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
+            buttonSign.Location = new Point(3, 355);
             buttonSign.Name = "buttonSign";
-            buttonSign.Size = new Size(124, 45);
+            buttonSign.Size = new Size(124, 70);
             buttonSign.TabIndex = 16;
             buttonSign.Text = "+/-";
             buttonSign.UseVisualStyleBackColor = true;
@@ -273,11 +273,11 @@
             // button0
             // 
             button0.BackColor = SystemColors.ActiveCaption;
-            button0.Font = new Font("휴먼둥근헤드라인", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            button0.ForeColor = Color.Teal;
-            button0.Location = new Point(137, 243);
+            button0.Font = new Font("휴먼둥근헤드라인", 22.2F);
+            button0.ForeColor = Color.Cyan;
+            button0.Location = new Point(135, 355);
             button0.Name = "button0";
-            button0.Size = new Size(124, 45);
+            button0.Size = new Size(124, 70);
             button0.TabIndex = 17;
             button0.Text = "0";
             button0.UseVisualStyleBackColor = false;
@@ -285,10 +285,10 @@
             // 
             // buttonDot
             // 
-            buttonDot.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
-            buttonDot.Location = new Point(271, 243);
+            buttonDot.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
+            buttonDot.Location = new Point(267, 355);
             buttonDot.Name = "buttonDot";
-            buttonDot.Size = new Size(124, 45);
+            buttonDot.Size = new Size(124, 70);
             buttonDot.TabIndex = 18;
             buttonDot.Text = ".";
             buttonDot.UseVisualStyleBackColor = true;
@@ -297,11 +297,11 @@
             // buttonEqual
             // 
             buttonEqual.BackColor = SystemColors.ActiveCaption;
-            buttonEqual.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
+            buttonEqual.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
             buttonEqual.ForeColor = Color.White;
-            buttonEqual.Location = new Point(405, 243);
+            buttonEqual.Location = new Point(399, 355);
             buttonEqual.Name = "buttonEqual";
-            buttonEqual.Size = new Size(124, 45);
+            buttonEqual.Size = new Size(124, 70);
             buttonEqual.TabIndex = 19;
             buttonEqual.Text = "=";
             buttonEqual.UseVisualStyleBackColor = false;
@@ -344,16 +344,16 @@
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Percent, 20F));
             tableLayoutPanel1.RowStyles.Add(new RowStyle(SizeType.Absolute, 20F));
-            tableLayoutPanel1.Size = new Size(537, 301);
+            tableLayoutPanel1.Size = new Size(529, 440);
             tableLayoutPanel1.TabIndex = 0;
             // 
             // buttonC
             // 
             buttonC.BackColor = Color.Red;
-            buttonC.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
+            buttonC.Font = new Font("한컴 말랑말랑 Bold", 19.8000011F, FontStyle.Bold);
             buttonC.Location = new Point(3, 3);
             buttonC.Name = "buttonC";
-            buttonC.Size = new Size(124, 45);
+            buttonC.Size = new Size(124, 70);
             buttonC.TabIndex = 20;
             buttonC.Text = "C";
             buttonC.UseVisualStyleBackColor = false;
@@ -361,17 +361,17 @@
             // 
             // txtOutput
             // 
-            txtOutput.Font = new Font("맑은 고딕", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            txtOutput.Location = new Point(52, 125);
+            txtOutput.Font = new Font("맑은 고딕", 19.8000011F, FontStyle.Bold, GraphicsUnit.Point, 129);
+            txtOutput.Location = new Point(52, 124);
             txtOutput.Name = "txtOutput";
-            txtOutput.Size = new Size(529, 43);
+            txtOutput.Size = new Size(529, 51);
             txtOutput.TabIndex = 1;
             txtOutput.TextChanged += txtInput_TextChanged;
             // 
             // txtInput
             // 
             txtInput.Font = new Font("맑은 고딕", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 129);
-            txtInput.Location = new Point(52, 67);
+            txtInput.Location = new Point(52, 54);
             txtInput.Name = "txtInput";
             txtInput.Size = new Size(529, 43);
             txtInput.TabIndex = 2;
@@ -391,7 +391,7 @@
             // 
             AutoScaleDimensions = new SizeF(9F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(654, 505);
+            ClientSize = new Size(642, 657);
             Controls.Add(LblName);
             Controls.Add(txtInput);
             Controls.Add(txtOutput);
