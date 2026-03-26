@@ -20,6 +20,31 @@ namespace SimpleCalculator
         {
             txtInput.ReadOnly = true;
             txtOutput.ReadOnly = true;
+
+            txtInput.TabStop = false;
+            txtOutput.TabStop = false;
+
+            button0.TabStop = false;
+            button1.TabStop = false;
+            button2.TabStop = false;
+            button3.TabStop = false;
+            button4.TabStop = false;
+            button5.TabStop = false;
+            button6.TabStop = false;
+            button7.TabStop = false;
+            button8.TabStop = false;
+            button9.TabStop = false;
+            buttonAdd.TabStop = false;
+            buttonSub.TabStop = false;
+            buttonMul.TabStop = false;
+            buttonDiv.TabStop = false;
+            buttonEqual.TabStop = false;
+            buttonDot.TabStop = false;
+            buttonSign.TabStop = false;
+            buttonC.TabStop = false;
+            buttonCE.TabStop = false;
+            buttonDel.TabStop = false;
+
             txtInput.Text = "";
             txtOutput.Text = "0";
             this.ActiveControl = null;
@@ -38,6 +63,7 @@ namespace SimpleCalculator
             }
 
             UpdateInputExpression();
+            this.ActiveControl = null;
         }
 
         private void InputDot()
@@ -53,6 +79,7 @@ namespace SimpleCalculator
             }
 
             UpdateInputExpression();
+            this.ActiveControl = null;
         }
 
         private void UpdateInputExpression()
@@ -76,6 +103,7 @@ namespace SimpleCalculator
             currentOperator = op;
             isNewNumber = true;
             txtInput.Text = firstNumber.ToString() + " " + currentOperator;
+            this.ActiveControl = null;
         }
 
         private void Calculate()
@@ -101,6 +129,7 @@ namespace SimpleCalculator
                     if (secondNumber == 0)
                     {
                         MessageBox.Show("0으로 나눌 수 없습니다.");
+                        this.ActiveControl = null;
                         return;
                     }
                     result = firstNumber / secondNumber;
@@ -112,6 +141,7 @@ namespace SimpleCalculator
             firstNumber = result;
             currentOperator = "";
             isNewNumber = true;
+            this.ActiveControl = null;
         }
 
         private void ClearAll()
@@ -121,6 +151,7 @@ namespace SimpleCalculator
             firstNumber = 0;
             currentOperator = "";
             isNewNumber = true;
+            this.ActiveControl = null;
         }
 
         private void ClearEntry()
@@ -132,6 +163,8 @@ namespace SimpleCalculator
                 txtInput.Text = firstNumber.ToString() + " " + currentOperator;
             else
                 txtInput.Text = "";
+
+            this.ActiveControl = null;
         }
 
         private void DeleteOne()
@@ -148,6 +181,8 @@ namespace SimpleCalculator
 
                 UpdateInputExpression();
             }
+
+            this.ActiveControl = null;
         }
 
         private void ChangeSign()
@@ -161,6 +196,8 @@ namespace SimpleCalculator
 
                 UpdateInputExpression();
             }
+
+            this.ActiveControl = null;
         }
 
         private void button0_Click(object sender, EventArgs e)
@@ -276,60 +313,96 @@ namespace SimpleCalculator
             if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
             {
                 InputNumber((e.KeyCode - Keys.D0).ToString());
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
             {
                 InputNumber((e.KeyCode - Keys.NumPad0).ToString());
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Add || (e.KeyCode == Keys.Oemplus && e.Shift))
             {
                 SetOperator("+");
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Subtract || e.KeyCode == Keys.OemMinus)
             {
                 SetOperator("-");
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Multiply || (e.KeyCode == Keys.D8 && e.Shift))
             {
                 SetOperator("*");
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Divide || e.KeyCode == Keys.OemQuestion)
             {
                 SetOperator("/");
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.OemPeriod)
             {
                 InputDot();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Enter)
             {
                 Calculate();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Back)
             {
                 DeleteOne();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
 
             if (e.KeyCode == Keys.Escape)
             {
                 ClearAll();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                return;
+            }
+
+            if (e.KeyCode == Keys.E)
+            {
+                ClearEntry();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
+                return;
+            }
+
+            if (e.KeyCode == Keys.N)
+            {
+                ChangeSign();
+                e.Handled = true;
+                e.SuppressKeyPress = true;
                 return;
             }
         }
