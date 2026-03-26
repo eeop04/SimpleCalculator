@@ -201,7 +201,7 @@
             button1.Text = "1";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            button1.KeyDown += button1_KeyDown;
+            button1.KeyDown += Form1_KeyDown;
             // 
             // button2
             // 

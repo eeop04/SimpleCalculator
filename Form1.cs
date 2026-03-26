@@ -1,4 +1,5 @@
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using System;
+using System.Windows.Forms;
 
 namespace SimpleCalculator
 {
@@ -11,18 +12,19 @@ namespace SimpleCalculator
         public Form1()
         {
             InitializeComponent();
+            this.KeyPreview = true;
+            this.KeyDown += Form1_KeyDown;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            txtInput.ReadOnly = true;    // 식 표시창
-            txtOutput.ReadOnly = true;   // 결과 표시창
-
+            txtInput.ReadOnly = true;
+            txtOutput.ReadOnly = true;
             txtInput.Text = "";
             txtOutput.Text = "0";
+            this.ActiveControl = null;
         }
 
-        // 공통 숫자 입력 처리
         private void InputNumber(string number)
         {
             if (txtOutput.Text == "0" || isNewNumber)
@@ -35,19 +37,36 @@ namespace SimpleCalculator
                 txtOutput.Text += number;
             }
 
-            // 연산자가 이미 눌린 상태면: 식 + 두 번째 숫자 표시
+            UpdateInputExpression();
+        }
+
+        private void InputDot()
+        {
+            if (isNewNumber)
+            {
+                txtOutput.Text = "0.";
+                isNewNumber = false;
+            }
+            else if (!txtOutput.Text.Contains("."))
+            {
+                txtOutput.Text += ".";
+            }
+
+            UpdateInputExpression();
+        }
+
+        private void UpdateInputExpression()
+        {
             if (currentOperator != "")
             {
                 txtInput.Text = firstNumber.ToString() + " " + currentOperator + " " + txtOutput.Text;
             }
             else
             {
-                // 첫 번째 숫자 입력 중이면 입력창에도 그대로 표시
                 txtInput.Text = txtOutput.Text;
             }
         }
 
-        // 공통 연산자 처리
         private void SetOperator(string op)
         {
             if (txtOutput.Text == "")
@@ -55,13 +74,10 @@ namespace SimpleCalculator
 
             firstNumber = double.Parse(txtOutput.Text);
             currentOperator = op;
-
-            txtInput.Text = firstNumber.ToString() + " " + currentOperator;
-            txtOutput.Text = "0";
             isNewNumber = true;
+            txtInput.Text = firstNumber.ToString() + " " + currentOperator;
         }
 
-        // 공통 계산 처리
         private void Calculate()
         {
             if (currentOperator == "" || txtOutput.Text == "")
@@ -93,19 +109,48 @@ namespace SimpleCalculator
 
             txtInput.Text = firstNumber.ToString() + " " + currentOperator + " " + secondNumber.ToString() + " = " + result.ToString();
             txtOutput.Text = result.ToString();
-
             firstNumber = result;
             currentOperator = "";
             isNewNumber = true;
         }
 
-        // 3 버튼
-        private void button15_Click(object sender, EventArgs e)
+        private void ClearAll()
         {
-            InputNumber("3");
+            txtInput.Text = "";
+            txtOutput.Text = "0";
+            firstNumber = 0;
+            currentOperator = "";
+            isNewNumber = true;
         }
 
-        private void buttonSign_Click(object sender, EventArgs e)
+        private void ClearEntry()
+        {
+            txtOutput.Text = "0";
+            isNewNumber = true;
+
+            if (currentOperator != "")
+                txtInput.Text = firstNumber.ToString() + " " + currentOperator;
+            else
+                txtInput.Text = "";
+        }
+
+        private void DeleteOne()
+        {
+            if (!isNewNumber && txtOutput.Text.Length > 0)
+            {
+                txtOutput.Text = txtOutput.Text.Substring(0, txtOutput.Text.Length - 1);
+
+                if (txtOutput.Text == "" || txtOutput.Text == "-")
+                {
+                    txtOutput.Text = "0";
+                    isNewNumber = true;
+                }
+
+                UpdateInputExpression();
+            }
+        }
+
+        private void ChangeSign()
         {
             if (txtOutput.Text != "0" && txtOutput.Text != "")
             {
@@ -114,40 +159,13 @@ namespace SimpleCalculator
                 else
                     txtOutput.Text = "-" + txtOutput.Text;
 
-                if (currentOperator != "")
-                    txtInput.Text = firstNumber.ToString() + " " + currentOperator + " " + txtOutput.Text;
-                else
-                    txtInput.Text = txtOutput.Text;
+                UpdateInputExpression();
             }
         }
 
         private void button0_Click(object sender, EventArgs e)
         {
             InputNumber("0");
-        }
-
-        private void buttonDot_Click(object sender, EventArgs e)
-        {
-            if (isNewNumber)
-            {
-                txtOutput.Text = "0.";
-                isNewNumber = false;
-            }
-            else if (!txtOutput.Text.Contains("."))
-            {
-                txtOutput.Text += ".";
-            }
-
-            if (currentOperator != "")
-                txtInput.Text = firstNumber.ToString() + " " + currentOperator + " " + txtOutput.Text;
-            else
-                txtInput.Text = txtOutput.Text;
-        }
-
-        // = 버튼
-        private void button20_Click(object sender, EventArgs e)
-        {
-            Calculate();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -160,9 +178,9 @@ namespace SimpleCalculator
             InputNumber("2");
         }
 
-        private void buttonAdd_Click(object sender, EventArgs e)
+        private void button15_Click(object sender, EventArgs e)
         {
-            SetOperator("+");
+            InputNumber("3");
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -180,11 +198,6 @@ namespace SimpleCalculator
             InputNumber("6");
         }
 
-        private void buttonSub_Click(object sender, EventArgs e)
-        {
-            SetOperator("-");
-        }
-
         private void button7_Click(object sender, EventArgs e)
         {
             InputNumber("7");
@@ -200,48 +213,19 @@ namespace SimpleCalculator
             InputNumber("9");
         }
 
+        private void buttonAdd_Click(object sender, EventArgs e)
+        {
+            SetOperator("+");
+        }
+
+        private void buttonSub_Click(object sender, EventArgs e)
+        {
+            SetOperator("-");
+        }
+
         private void buttonMul_Click(object sender, EventArgs e)
         {
             SetOperator("*");
-        }
-
-        private void buttonC_Click(object sender, EventArgs e)
-        {
-            txtInput.Text = "";
-            txtOutput.Text = "0";
-            firstNumber = 0;
-            currentOperator = "";
-            isNewNumber = true;
-        }
-
-        private void buttonCE_Click(object sender, EventArgs e)
-        {
-            txtOutput.Text = "0";
-            isNewNumber = true;
-
-            if (currentOperator != "")
-                txtInput.Text = firstNumber.ToString() + " " + currentOperator;
-            else
-                txtInput.Text = "";
-        }
-
-        private void buttonDel_Click(object sender, EventArgs e)
-        {
-            if (!isNewNumber && txtOutput.Text.Length > 0)
-            {
-                txtOutput.Text = txtOutput.Text.Substring(0, txtOutput.Text.Length - 1);
-
-                if (txtOutput.Text == "" || txtOutput.Text == "-")
-                {
-                    txtOutput.Text = "0";
-                    isNewNumber = true;
-                }
-
-                if (currentOperator != "")
-                    txtInput.Text = firstNumber.ToString() + " " + currentOperator + " " + txtOutput.Text;
-                else
-                    txtInput.Text = txtOutput.Text;
-            }
         }
 
         private void buttonDiv_Click(object sender, EventArgs e)
@@ -249,84 +233,161 @@ namespace SimpleCalculator
             SetOperator("/");
         }
 
+        private void button20_Click(object sender, EventArgs e)
+        {
+            Calculate();
+        }
+
+        private void buttonDot_Click(object sender, EventArgs e)
+        {
+            InputDot();
+        }
+
+        private void buttonSign_Click(object sender, EventArgs e)
+        {
+            ChangeSign();
+        }
+
+        private void buttonC_Click(object sender, EventArgs e)
+        {
+            ClearAll();
+        }
+
+        private void buttonCE_Click(object sender, EventArgs e)
+        {
+            ClearEntry();
+        }
+
+        private void buttonDel_Click(object sender, EventArgs e)
+        {
+            DeleteOne();
+        }
+
         private void txtInput_TextChanged(object sender, EventArgs e)
         {
-
         }
 
         private void txtOutput_TextChanged(object sender, EventArgs e)
         {
+        }
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode >= Keys.D0 && e.KeyCode <= Keys.D9)
+            {
+                InputNumber((e.KeyCode - Keys.D0).ToString());
+                return;
+            }
+
+            if (e.KeyCode >= Keys.NumPad0 && e.KeyCode <= Keys.NumPad9)
+            {
+                InputNumber((e.KeyCode - Keys.NumPad0).ToString());
+                return;
+            }
+
+            if (e.KeyCode == Keys.Add || (e.KeyCode == Keys.Oemplus && e.Shift))
+            {
+                SetOperator("+");
+                return;
+            }
+
+            if (e.KeyCode == Keys.Subtract || e.KeyCode == Keys.OemMinus)
+            {
+                SetOperator("-");
+                return;
+            }
+
+            if (e.KeyCode == Keys.Multiply || (e.KeyCode == Keys.D8 && e.Shift))
+            {
+                SetOperator("*");
+                return;
+            }
+
+            if (e.KeyCode == Keys.Divide || e.KeyCode == Keys.OemQuestion)
+            {
+                SetOperator("/");
+                return;
+            }
+
+            if (e.KeyCode == Keys.Decimal || e.KeyCode == Keys.OemPeriod)
+            {
+                InputDot();
+                return;
+            }
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                Calculate();
+                return;
+            }
+
+            if (e.KeyCode == Keys.Back)
+            {
+                DeleteOne();
+                return;
+            }
+
+            if (e.KeyCode == Keys.Escape)
+            {
+                ClearAll();
+                return;
+            }
         }
 
         private void buttonDiv_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void buttonMul_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void buttonSub_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void buttonAdd_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void buttonEqual_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button1_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button2_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button3_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button4_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button5_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button6_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button7_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button8_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
 
         private void button9_KeyDown(object sender, KeyEventArgs e)
         {
-
         }
     }
 }
