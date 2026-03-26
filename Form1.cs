@@ -122,7 +122,7 @@ namespace SimpleCalculator
                 case "-":
                     result = firstNumber - secondNumber;
                     break;
-                case "*":
+                case "x":
                     result = firstNumber * secondNumber;
                     break;
                 case "/":
@@ -344,7 +344,7 @@ namespace SimpleCalculator
 
             if (e.KeyCode == Keys.Multiply || (e.KeyCode == Keys.D8 && e.Shift))
             {
-                SetOperator("*");
+                SetOperator("x");
                 e.Handled = true;
                 e.SuppressKeyPress = true;
                 return;

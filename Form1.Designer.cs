@@ -142,7 +142,7 @@
             buttonMul.Name = "buttonMul";
             buttonMul.Size = new Size(124, 70);
             buttonMul.TabIndex = 7;
-            buttonMul.Text = "*";
+            buttonMul.Text = "x";
             buttonMul.UseVisualStyleBackColor = false;
             buttonMul.Click += buttonMul_Click;
             buttonMul.KeyDown += buttonMul_KeyDown;
