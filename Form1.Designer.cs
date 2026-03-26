@@ -340,17 +340,19 @@
             // 
             // txtOutput
             // 
+            txtOutput.Font = new Font("맑은 고딕", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 129);
             txtOutput.Location = new Point(52, 125);
             txtOutput.Name = "txtOutput";
-            txtOutput.Size = new Size(529, 27);
+            txtOutput.Size = new Size(529, 43);
             txtOutput.TabIndex = 1;
             txtOutput.TextChanged += txtInput_TextChanged;
             // 
             // txtInput
             // 
+            txtInput.Font = new Font("맑은 고딕", 16.2F, FontStyle.Regular, GraphicsUnit.Point, 129);
             txtInput.Location = new Point(52, 67);
             txtInput.Name = "txtInput";
-            txtInput.Size = new Size(529, 27);
+            txtInput.Size = new Size(529, 43);
             txtInput.TabIndex = 2;
             txtInput.TextChanged += txtOutput_TextChanged;
             // 
