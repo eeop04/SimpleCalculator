@@ -93,37 +93,43 @@
             // 
             // button7
             // 
+            button7.BackColor = SystemColors.ActiveCaption;
             button7.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button7.ForeColor = Color.Teal;
             button7.Location = new Point(3, 63);
             button7.Name = "button7";
             button7.Size = new Size(124, 45);
             button7.TabIndex = 4;
             button7.Text = "7";
-            button7.UseVisualStyleBackColor = true;
+            button7.UseVisualStyleBackColor = false;
             button7.Click += button7_Click;
             button7.KeyDown += button7_KeyDown;
             // 
             // button8
             // 
+            button8.BackColor = SystemColors.ActiveCaption;
             button8.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button8.ForeColor = Color.Teal;
             button8.Location = new Point(137, 63);
             button8.Name = "button8";
             button8.Size = new Size(124, 45);
             button8.TabIndex = 5;
             button8.Text = "8";
-            button8.UseVisualStyleBackColor = true;
+            button8.UseVisualStyleBackColor = false;
             button8.Click += button8_Click;
             button8.KeyDown += button8_KeyDown;
             // 
             // button9
             // 
+            button9.BackColor = SystemColors.ActiveCaption;
             button9.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button9.ForeColor = Color.Teal;
             button9.Location = new Point(271, 63);
             button9.Name = "button9";
             button9.Size = new Size(124, 45);
             button9.TabIndex = 6;
             button9.Text = "9";
-            button9.UseVisualStyleBackColor = true;
+            button9.UseVisualStyleBackColor = false;
             button9.Click += button9_Click;
             button9.KeyDown += button9_KeyDown;
             // 
@@ -143,37 +149,43 @@
             // 
             // button4
             // 
+            button4.BackColor = SystemColors.ActiveCaption;
             button4.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button4.ForeColor = Color.Teal;
             button4.Location = new Point(3, 123);
             button4.Name = "button4";
             button4.Size = new Size(124, 45);
             button4.TabIndex = 8;
             button4.Text = "4";
-            button4.UseVisualStyleBackColor = true;
+            button4.UseVisualStyleBackColor = false;
             button4.Click += button4_Click;
             button4.KeyDown += button4_KeyDown;
             // 
             // button5
             // 
+            button5.BackColor = SystemColors.ActiveCaption;
             button5.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button5.ForeColor = Color.Teal;
             button5.Location = new Point(137, 123);
             button5.Name = "button5";
             button5.Size = new Size(124, 45);
             button5.TabIndex = 9;
             button5.Text = "5";
-            button5.UseVisualStyleBackColor = true;
+            button5.UseVisualStyleBackColor = false;
             button5.Click += button5_Click;
             button5.KeyDown += button5_KeyDown;
             // 
             // button6
             // 
+            button6.BackColor = SystemColors.ActiveCaption;
             button6.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button6.ForeColor = Color.Teal;
             button6.Location = new Point(271, 123);
             button6.Name = "button6";
             button6.Size = new Size(124, 45);
             button6.TabIndex = 10;
             button6.Text = "6";
-            button6.UseVisualStyleBackColor = true;
+            button6.UseVisualStyleBackColor = false;
             button6.Click += button6_Click;
             button6.KeyDown += button6_KeyDown;
             // 
@@ -193,37 +205,43 @@
             // 
             // button1
             // 
+            button1.BackColor = SystemColors.ActiveCaption;
             button1.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button1.ForeColor = Color.Teal;
             button1.Location = new Point(3, 183);
             button1.Name = "button1";
             button1.Size = new Size(124, 45);
             button1.TabIndex = 12;
             button1.Text = "1";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             button1.KeyDown += Form1_KeyDown;
             // 
             // button2
             // 
+            button2.BackColor = SystemColors.ActiveCaption;
             button2.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button2.ForeColor = Color.Teal;
             button2.Location = new Point(137, 183);
             button2.Name = "button2";
             button2.Size = new Size(124, 45);
             button2.TabIndex = 13;
             button2.Text = "2";
-            button2.UseVisualStyleBackColor = true;
+            button2.UseVisualStyleBackColor = false;
             button2.Click += button2_Click;
             button2.KeyDown += button2_KeyDown;
             // 
             // button3
             // 
+            button3.BackColor = SystemColors.ActiveCaption;
             button3.Font = new Font("휴먼둥근헤드라인", 10.8F);
+            button3.ForeColor = Color.Teal;
             button3.Location = new Point(271, 183);
             button3.Name = "button3";
             button3.Size = new Size(124, 45);
             button3.TabIndex = 14;
             button3.Text = "3";
-            button3.UseVisualStyleBackColor = true;
+            button3.UseVisualStyleBackColor = false;
             button3.Click += button15_Click;
             button3.KeyDown += button3_KeyDown;
             // 
@@ -254,13 +272,15 @@
             // 
             // button0
             // 
+            button0.BackColor = SystemColors.ActiveCaption;
             button0.Font = new Font("휴먼둥근헤드라인", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 129);
+            button0.ForeColor = Color.Teal;
             button0.Location = new Point(137, 243);
             button0.Name = "button0";
             button0.Size = new Size(124, 45);
             button0.TabIndex = 17;
             button0.Text = "0";
-            button0.UseVisualStyleBackColor = true;
+            button0.UseVisualStyleBackColor = false;
             button0.Click += button0_Click;
             // 
             // buttonDot
@@ -329,13 +349,14 @@
             // 
             // buttonC
             // 
+            buttonC.BackColor = Color.Red;
             buttonC.Font = new Font("한컴 말랑말랑 Bold", 10.1999989F, FontStyle.Bold);
             buttonC.Location = new Point(3, 3);
             buttonC.Name = "buttonC";
             buttonC.Size = new Size(124, 45);
             buttonC.TabIndex = 20;
             buttonC.Text = "C";
-            buttonC.UseVisualStyleBackColor = true;
+            buttonC.UseVisualStyleBackColor = false;
             buttonC.Click += buttonC_Click;
             // 
             // txtOutput
